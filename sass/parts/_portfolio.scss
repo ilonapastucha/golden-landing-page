@@ -1,0 +1,43 @@
+.portfolio {
+  background-color: $greyWhite;
+  .card {
+    overflow: hidden;
+    background-color: $greyWhite;
+  }
+  .card-heading {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  .card-description {
+    font-size: 1.6rem;
+    font-family: $fontDecorative;
+    margin-top: 0.5rem;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .portfolio {
+    .image-container {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    .card {
+      width: 300px;
+      height: 300px;
+      margin: 3rem auto 0;
+    }
+    .image-container {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
