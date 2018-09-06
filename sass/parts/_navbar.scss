@@ -1,3 +1,7 @@
+%display-justify {
+  display: flex;
+  justify-content: space-between;
+}
 .nav {
   padding: 2rem 0;
   background-color: transparent;
@@ -13,15 +17,13 @@
 }
 
 .navbar-container {
-  display: flex;
-  justify-content: space-between;
+  @extend %display-justify;
   align-items: center;
 }
 
 .main-nav {
-  display: flex;
+  @extend %display-justify;
   list-style-type: none;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   li {
@@ -82,11 +84,11 @@
   }
   .main-nav {
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 0px;
     margin-top: 1rem;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     transition: all 1s ease;
     li {
       text-align: center;
@@ -131,11 +133,10 @@
       transform: scale(1.05);
     }
     .ff-fallback {
+      @extend %display-justify;
       width: 100%;
       height: 35px;
-      display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
     .bar {
       display: block;

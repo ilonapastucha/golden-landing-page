@@ -1,3 +1,8 @@
+%display-justify-align {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
 .team-members {
   background-color: $greyWhite;
   .image-container {
@@ -23,9 +28,7 @@
   color: $lightGray;
 }
 .socials-container {
-  display:flex;
-  justify-content: center;
-  align-items: center;
+  @extend %display-justify-align;
   list-style: none;
   a {
     text-decoration: none;
@@ -34,11 +37,9 @@
     }
   }
   span.fab {
+    @extend %display-justify-align;
     transition: 0.4s ease-out;
     margin: 0 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width:60px;
     height: 60px;
     color: $black;
@@ -67,5 +68,3 @@
     }
   }
 }
-
-

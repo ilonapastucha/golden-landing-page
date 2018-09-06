@@ -1,16 +1,17 @@
+%display-align-justify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .card {
+  @extend %display-align-justify;
   margin-top: 8rem;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   align-content: center;
   cursor: pointer;
   .icon-container {
+    @extend %display-align-justify;
     transition: transform 0.3s;
-    display:flex;
-    justify-content: center;
-    align-items: center;
     width: 90px;
     height: 90px;
     border: 6px solid $primary;
